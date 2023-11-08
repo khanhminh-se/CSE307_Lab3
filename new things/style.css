@@ -1,0 +1,13 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+main{
+    width: 500px;
+    height:600px;
+    border: 1px ;
+}
+form{
+       text-align: center;
+       
+}

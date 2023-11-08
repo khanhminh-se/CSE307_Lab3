@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form registration</title>
+    <meta charset="utf-8">
+    <style>
+        .div1 {
+            background-image: url('https://i.gifer.com/XOsX.gif'), url('https://i.gifer.com/9hw9.gif');
+            background-position: right, left;
+            background-repeat: repeat, repeat;
+            padding: 200px;
+        }
+
+        .div2 {
+            width: 369px;
+            border: 4px solid bisque;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            text-align: center;
+            background-color: azure;
+            box-sizing: content-box;
+            box-shadow: 10px 10px 10px gray;
+
+        }
+
+
+        input,
+        textarea {
+            width: 350px;
+            height: 50px;
+            border: 3px solid aquamarine;
+            border-radius: 10px;
+            top: 20px;
+
+        }
+
+        .submitbutton {
+            border: 2px solid blue;
+            background-color: aqua;
+            border-radius: 15px;
+            color: aliceblue;
+            font-size: 300;
+        }
+
+        .submitbutton:hover {
+            opacity: 0.5;
+        }
+
+        #myBtn {
+            display: flex;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: red;
+            /* Set a background color */
+            color: rgb(193, 45, 45);
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+            font-size: 18px;
+            /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+            /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="div1">
+            <div class="div2">
+                <form>
+                    <input type="text" class="nametxt" name="name" title="name" placeholder="Your Name">
+                    <br>
+                    <input type="email" class="email" name="email" title="email" pattern="[@ ^]@[@ ^].[@ ^]"
+                        required="true" placeholder="Your Email">
+                    <br>
+                    <textarea class="message" name="messagecontainer" rows="3" cols="20"
+                        placeholder="Your Message"></textarea>
+                    <br>
+                    <input type="submit" values="Submit" class="submitbutton">
+                </form>
+            </div>
+
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </main>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+</body>
+
+</html>
